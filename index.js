@@ -1,3 +1,4 @@
+
 require('dotenv').config();
 
 const {
@@ -19,6 +20,15 @@ const client = new Client({
         GatewayIntentBits.GuildMembers
     ]
 });
+// =====================
+// LOGIN DEBUG (PUT THIS RIGHT BEFORE LOGIN)
+// =====================
+console.log("TOKEN EXISTS:", !!process.env.TOKEN);
+
+// =====================
+// LOGIN
+// =====================
+client.login(process.env.TOKEN);
 
 // =====================
 // ROLE IDS (REPLACE THESE)
